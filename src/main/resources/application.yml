@@ -1,2 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:13306/yl_test
+    username: root
+    password: 123456
+  jackson:
+    date-format: "yyyy-MM-dd HH:mm:ss"
+    time-zone: GMT+8
+
+logging:
+  level:
+    root: info
+
 server:
   port: 80
+mybatis:
+  configuration:
+    # 默认开启驼峰命名法，可以不用设置该属性
+#    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
